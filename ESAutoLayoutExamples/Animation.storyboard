@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UoS-tQ-59x">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Animation View Controller-->
+        <scene sceneID="rzU-vW-Z0e">
+            <objects>
+                <viewController id="UoS-tQ-59x" customClass="AnimationViewController" customModule="temp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n1D-vE-cvb"/>
+                        <viewControllerLayoutGuide type="bottom" id="pvs-wM-Xte"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eKO-dk-mot">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKr-D9-ovV">
+                                <rect key="frame" x="279" y="45" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HSj-pC-E82" userLabel="Pink View">
+                                <rect key="frame" x="180" y="101" width="240" height="53"/>
+                                <color key="backgroundColor" red="1" green="0.0075604838710000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="VKi-zT-kEg"/>
+                                    <constraint firstAttribute="width" constant="240" id="eCl-Uq-4u4"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdd-im-i4m">
+                                <rect key="frame" x="277" y="114" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="UoS-tQ-59x" eventType="touchUpInside" id="UBc-oo-KTg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vS5-LI-sc6">
+                                <rect key="frame" x="526" y="562" width="54" height="30"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <action selector="dismiss" destination="UoS-tQ-59x" eventType="touchUpInside" id="bcB-nw-l9l"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HSj-pC-E82" firstAttribute="centerX" secondItem="eKO-dk-mot" secondAttribute="centerX" id="0NR-tK-g5c"/>
+                            <constraint firstItem="xdd-im-i4m" firstAttribute="top" secondItem="JKr-D9-ovV" secondAttribute="bottom" constant="48" id="6qV-CM-idh"/>
+                            <constraint firstItem="pvs-wM-Xte" firstAttribute="top" secondItem="vS5-LI-sc6" secondAttribute="bottom" constant="8" id="Nhs-gP-L3z"/>
+                            <constraint firstItem="JKr-D9-ovV" firstAttribute="top" secondItem="n1D-vE-cvb" secondAttribute="bottom" constant="25" id="ajQ-6N-397"/>
+                            <constraint firstItem="JKr-D9-ovV" firstAttribute="centerX" secondItem="eKO-dk-mot" secondAttribute="centerX" id="hK4-Ej-xK5"/>
+                            <constraint firstAttribute="trailing" secondItem="vS5-LI-sc6" secondAttribute="trailing" constant="20" id="iwk-Kf-gYA"/>
+                            <constraint firstItem="xdd-im-i4m" firstAttribute="centerX" secondItem="eKO-dk-mot" secondAttribute="centerX" id="oj2-Il-cip"/>
+                            <constraint firstItem="HSj-pC-E82" firstAttribute="top" secondItem="JKr-D9-ovV" secondAttribute="bottom" constant="35" id="tyh-UY-XQS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="xdd-im-i4m" id="jEc-TW-veQ"/>
+                        <outlet property="buttonTopConstraint" destination="6qV-CM-idh" id="MWt-F4-GAl"/>
+                        <outlet property="pinkView" destination="HSj-pC-E82" id="HVh-Yj-8G2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cKH-RA-Oxi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="413" y="449"/>
+        </scene>
+    </scenes>
+</document>
