@@ -20,17 +20,13 @@ class AnimationViewController: UIViewController {
     
     @IBAction func buttonPressed(sender: AnyObject) {
         dispatch_async(dispatch_get_main_queue(), {[weak self] () -> Void in
-            
             UIView.animateWithDuration(0.75, animations: { () -> Void in
                 self?.pinkView.alpha = 1.0
                 self?.buttonTopConstraint.constant = 126
                 //the next line allow the constraint to animate
                 self?.button.layoutIfNeeded()
-                
                 }, completion: { (Bool) -> Void in
-                    
             })
-            
         })
     }
     
